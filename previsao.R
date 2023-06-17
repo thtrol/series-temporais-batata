@@ -44,7 +44,7 @@ cam<-paste(getwd(),"/previsoes.xlsx",sep = "")
 
 if (file.exists(cam)){
   teste<-read_excel(cam)
-  previsoes<-bind_rows(atual,teste)
+  previsoes<-bind_rows(previsoes,teste)
 }
 
 write_xlsx(previsoes,cam)
