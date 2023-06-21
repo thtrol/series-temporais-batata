@@ -44,6 +44,7 @@ cam<-paste(getwd(),"/previsoes.xlsx",sep = "")
 
 if (file.exists(cam)){
   teste<-read_excel(cam)
+  teste<-head(teste,6)
   previsoes<-bind_rows(previsoes,teste)
 }
 
